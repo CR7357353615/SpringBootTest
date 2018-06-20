@@ -23,6 +23,6 @@ public class UserController {
     }
 	@RequestMapping("/print")
 	public String printUser(){
-		return userService.queryUser();
+		return "123";
 	}
 }
