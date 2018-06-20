@@ -31,6 +31,6 @@ public class UserController extends SpringBootServletInitializer {
 
 	@RequestMapping("/print")
 	public String printUser(){
-		return "456";
+		return "123";
 	}
 }
