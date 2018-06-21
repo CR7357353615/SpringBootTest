@@ -1,6 +1,7 @@
 package com.lho.demo.controller;
 
 import com.benhealth.insurance.notification.Notification;
+import com.benhealth.insurance.notification.NotificationClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
@@ -32,6 +33,8 @@ public class UserController extends SpringBootServletInitializer {
 
 	@RequestMapping("/print")
 	public String printUser(){
-		return Notification.class.toString() + "123";
+		Notification notification = new Notification();
+		notification.setMessage("notification");
+		return notification.getMessage() + "123";
 	}
 }
